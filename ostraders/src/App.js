@@ -1,10 +1,27 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
+import './styles/styles.css'
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Collection from './pages/Collection'
+// import NoPage from "./pages/NoPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>React</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="collection" element={<Collection /> } />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
