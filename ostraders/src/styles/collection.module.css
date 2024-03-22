@@ -1,0 +1,14 @@
+.collection select{
+    border: 1px solid #eee;
+    padding: 5px 15px;
+    font-size: .9rem;
+}
+
+.collection select:focus-visible {
+    outline: none;
+}
+
+.collection option{
+    padding: 5px 15px;
+    height: 100%;
+}

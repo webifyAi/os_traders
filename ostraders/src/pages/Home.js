@@ -16,18 +16,38 @@ const Home = () => {
   return (
     <>
 
-      <div className="container-fluid padd-x">
-          <div className="row align-items-center">
-              <div className="col-md-6 col-12">
-                <h1>Great people drives greate car</h1>
-              </div>
-              <div className="col-md-6 col-12">
+      {/*herosection startsss heererere */}
 
-              </div>
+      <div className="container-fluid herosection p-0">
+        <div className="pt-5 mt-5 row align-items-start ">
+          <div className="col-lg-5 col-12 hero-left">
+            <h2>Choice for</h2>
+            <h3>The best</h3>
+            <h1>Car</h1>
+            <h2 style={{color: "#aaa", fontSize: '2.5rem', margin: '0'}}>Buy a</h2>
+          <p>Enhance your <br /> Driving Experience</p>
+          <div className="my-2">
+            <Link class="btn-12"><span>Explore</span></Link>
           </div>
+        </div>
+        <div className="col-lg-6 col-12 d-flex justify-content-lg-start justify-content-center align-items-center">
+          <img src="./images/BMW.png" className='img-fluid' alt="" />
+        </div>
       </div>
+    </div >
 
-   
+
+      {/*herosection ends heererere */ }
+
+  {/*Category section starts heererere */ }
+
+
+
+
+
+  {/*Category section endss heererere */ }
+
+
       <div className="container-fluid padd-x my-5">
 
         <div className="heading text-center">
@@ -45,12 +65,6 @@ const Home = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-3 col-md-6 col-sm-6">
-            <ProductItem />
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-6">
-            <ProductItem />
-          </div>
           <div className="col-lg-3 col-md-6 col-sm-6">
             <ProductItem />
           </div>

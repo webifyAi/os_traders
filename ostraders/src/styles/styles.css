@@ -13,6 +13,11 @@ ul {
     padding-right: 5vw;
 }
 
+.marg-y{
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+}
+
 /* button css starts heree  */
 
 
@@ -33,7 +38,7 @@ ul {
     background-image: none;
     color: #fff !important;
     cursor: pointer;
-    font-size: 100%;
+    font-size: 80%;
     font-weight: 900;
     line-height: 1.5;
     letter-spacing: 1px;
@@ -64,7 +69,7 @@ ul {
     border-radius: 99rem;
     border-width: 2px;
     overflow: hidden;
-    padding: 0.8rem 3rem;
+    padding: 0.7rem 2rem;
     position: relative;
 }
 
@@ -117,52 +122,106 @@ ul {
 
 /* common css starts heree */
 
-.heading{
+.herosection{
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: clip;
+    background-image: url("../../public/images/BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.herosection .hero-left{
+    display: flex;
+    justify-content: center;
+    align-items: start;
     flex-direction: column;
+    padding-left: 8vw;
 }
 
-.heading h2{
+.herosection h1{
+    font-size: 6.5rem;
+    line-height: 5rem;
+    text-transform: capitalize;
+    font-family: akira;
+    margin: 0 !important;
+}
+
+.herosection h2{
+    font-family: akira;
     font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-weight: 600;
+    margin-bottom: 0;
 }
 
-.heading p{
-    width: 50%;
-    margin: 10px 0 20px;
+.herosection h3{
+    font-family: akira;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.herosection p{
+    font-size: .9rem;
+    letter-spacing: 5px;
+}
+.herosection img{
+    margin-left: -50px;
 }
 
 .category{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 18vw;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    /* border: 1px solid var(--text-color); */
+
+    padding: 20px 20px 0;
+    background-color: #c06060;
+    color: var(--text-color);
+    border-radius: 5px;
+    height: 300px;
 }
 
-.cat-1{
-    background-color: #9F4546;
-}
-
-.cat-2{
-    background-color: #871719;
-}
-
-.cat-3{
-    background-color: #9F4546;
-}
-
-.cat-4{
-    background-color: #871719;
-
-}
 
 
 .category img{
-    width: 60%;
     object-fit: cover;
     text-align: left;
+    width: 100%;
+    height: auto;
+    transition: all .5s ease;
+
+}
+
+.category:hover img{
+    transform: scale(1.3) translateX(30px);
+}
+
+
+
+@media (max-width: 999px) {
+    .herosection{
+        height: 100%;
+    }
+
+    .hero-left{
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .herosection img{
+        margin: 0;
+        width: 80%;
+    }
+   
+}
+
+@media (max-width: 499px) {
+    .herosection img{
+        width: 100%;
+    }
 }
