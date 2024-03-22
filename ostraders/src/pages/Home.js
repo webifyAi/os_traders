@@ -16,6 +16,18 @@ const Home = () => {
   return (
     <>
 
+      <div className="container-fluid padd-x">
+          <div className="row align-items-center">
+              <div className="col-md-6 col-12">
+                <h1>Great people drives greate car</h1>
+              </div>
+              <div className="col-md-6 col-12">
+
+              </div>
+          </div>
+      </div>
+
+   
       <div className="container-fluid padd-x my-5">
 
         <div className="heading text-center">
@@ -33,22 +45,33 @@ const Home = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <ProductItem />
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <ProductItem />
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <ProductItem />
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <ProductItem />
           </div>
         </div>
 
         <div className="text-center my-5">
           <Link class="btn-12"><span>View More</span></Link>
+        </div>
+      </div>
+
+
+
+
+
+      <div className="container-fluid">
+        <div className="heading">
+          <h2>Brands we have</h2>
+
         </div>
       </div>
     </>

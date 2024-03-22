@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 const ProductItem = () => {
     return (
         <>  
-            
 
             <div className={styles.item}>
                 <Link><img src="./images/car1.jpg" className='img-fluid' alt="" /></Link>
