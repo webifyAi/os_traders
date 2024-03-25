@@ -7,7 +7,7 @@ const ProductItem = () => {
         <>
 
             <div className={styles.item}>
-                <Link><img src="./images/car1.jpg" className='img-fluid' alt="" /></Link>
+               <Link><img src="./images/car1.jpg" className='img-fluid' alt="" /></Link>
                 <div className={styles.item_content}>
                     <div className="d-flex justify-content-between align-items-center mt-2 mb-1">
                         <Link><h4>Car Name</h4></Link>
