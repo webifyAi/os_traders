@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ProductItem from '../components/ProductItem'
 import styles from '../styles/product.module.css'
 import { Link } from 'react-router-dom';
-
+import data from "../assets/logos.json"
 
 const Home = () => {
 
@@ -18,34 +18,39 @@ const Home = () => {
 
       {/*herosection startsss heererere */}
 
-      <div className="container-fluid herosection p-0">
-        <div className="pt-5 mt-5 row align-items-start ">
-          <div className="col-lg-5 col-12 hero-left">
-            <h2>Choice for</h2>
-            <h3>The best</h3>
-            <h1>Car</h1>
-            <h2 style={{color: "#aaa", fontSize: '2.5rem', margin: '0'}}>Buy a</h2>
-          <p>Enhance your <br /> Driving Experience</p>
-          <div className="my-2">
-            <Link class="btn-12"><span>Explore</span></Link>
+      <div className="container-fluid herosection">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-7 hero-content">
+              <span>Export Auto Service _____</span>
+              <h2>Mercediz Benz - 2.0</h2>
+              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+              <ul>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+              </ul>
+              <div className="mt-1">
+                <a href="" className='btn'>Explore</a>
+              </div>
+            </div>
+            <div className="col-xl-5">
+              <div className="hero-img">
+                <img src="./images/hero-car-1.png" alt="" />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-lg-6 col-12 d-flex justify-content-lg-start justify-content-center align-items-center">
-          <img src="./images/BMW.png" className='img-fluid' alt="" />
-        </div>
       </div>
-    </div >
-
-
-      {/*herosection ends heererere */ }
-
-  {/*Category section starts heererere */ }
 
 
 
+      {/*herosection ends heererere */}
+
+      {/*Category section starts heererere */}
 
 
-  {/*Category section endss heererere */ }
+      {/*Category section endss heererere */}
 
 
       <div className="container-fluid padd-x my-5">
@@ -82,14 +87,19 @@ const Home = () => {
 
 
 
-      <div className="container-fluid">
-        <div className="heading">
+      <div className="container-fluid padd-x">
+        <div className="heading text-center">
           <h2>Brands we have</h2>
+          <div className="company">
+            {data.slice(0, 10).map((item, index) => {
+              return <img src={item.image.source} alt="" />
+            })}
 
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-export default Home
+export default Home;
