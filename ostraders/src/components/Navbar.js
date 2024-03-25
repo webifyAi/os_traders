@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container-fluid" style={{background: "var(--text-color)"}}>
+            <div className="container-fluid" style={{background: "var(--text-color)", overflowX: 'clip'}}>
                 <nav className={`${styles.nav} container`}>
                     <Link to="/" className={styles.logo}>
                         <img src="./images/OS TRADERS.png" alt="OS Traders" />

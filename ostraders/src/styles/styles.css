@@ -13,7 +13,7 @@ ul {
     padding-right: 5vw;
 }
 
-.marg-y{
+.marg-y {
     margin-top: 8vw;
     margin-bottom: 8vw;
 }
@@ -77,7 +77,7 @@ ul {
     color: var(--bg-color);
 }
 
-.btn-12:hover span{
+.btn-12:hover span {
     /* color: var(--text-color); */
     mix-blend-mode: difference;
 }
@@ -122,10 +122,11 @@ ul {
 
 /* common css starts heree */
 
-.herosection{
-    height: 100vh;
+.herosection {
+    height: 100%;
     width: 100%;
     padding-top: 100px;
+    padding-bottom: 200px;
     overflow: hidden;
     background-image: url("../../public/images/texture-bg-1.png");
     background-size: cover;
@@ -146,82 +147,191 @@ ul {
     z-index: -1;
 }
 
-.herosection .hero-content h2{
-    font-size: 3.5rem;
+.herosection .hero-content h2 {
+    font-size: 4.5rem;
     color: var(--bg-color);
     margin: 20px 0;
 }
 
-.herosection .hero-content span{
+.herosection .hero-content span {
     color: var(--accent-color);
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 500;
 }
 
-.herosection .hero-content p{
+.herosection .hero-content p {
     color: var(--text2-color);
+    font-size: 1.25rem;
 }
 
-.herosection .hero-content ul li{
+.herosection .hero-content ul li {
     color: var(--text2-color);
+    font-size: 1.15rem;
 }
 
-.herosection .hero-content ul li i{
+.herosection .hero-content ul li i {
     margin-right: 10px;
 }
 
-.herosection .hero-img{
+.herosection .hero-img {
     position: relative;
     width: 80%;
     height: 100%;
 }
 
-.herosection img{
+.herosection img {
     height: auto;
     position: absolute;
-    bottom: -40%;
+    bottom: -45%;
     right: -50%;
+}
+
+@media (max-width: 1440px) {
+    .herosection .hero-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .herosection .hero-content span {
+        font-size: 1.2rem;
+    }
+    
+    .herosection .hero-content p {
+        font-size: 1.04rem;
+    }
+    
+    .herosection .hero-content ul li {
+        font-size: 1rem;
+    }
 }
 
 
 
-
 @media (max-width: 1200px) {
-    .herosection{
+    .herosection {
         height: 100% !important;
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
-    .herosection .hero-img{
+    .herosection .hero-img {
         position: relative;
         width: 100%;
         height: 100%;
     }
 
-    .herosection img{
+    .herosection img {
         width: 100%;
         height: auto;
         position: static;
     }
-   
+
+    .herosection .hero-content h2{
+        font-size: 3.5rem;
+    }
+
+    .herosection .hero-content span{
+        font-size: 1.3rem;
+    }
+
+    .herosection .hero-content p{
+        font-size: 1rem;
+    }
+
+    .herosection .hero-content ul li {
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 768px) {
-   .herosection h2{
-    font-size: 8vw !important;
-   }
+    .herosection .hero-content h2 {
+        font-size: 8vw;
+    }
 }
 
-.company{
+@media (max-width: 399px) {
+    .herosection .hero-content h2{
+        font-size: 10vw;
+    }
+}
+
+.heading h3 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.heading h2 {
+    text-transform: capitalize;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.company {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.company img{
-    width: 10%;
-
+.company .brand-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 150px;
+    padding: 20px !important;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px;
+    transition: all 1s ease;
+    position: relative;
 }
 
+.company .brand-card:hover {
+    border: 1px solid var(--accent-color);
+    transition: all 1s ease;
+}
+
+.company .brand-card .arrow {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-size: .9rem;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: al .5s ease;
+}
+
+.company .brand-card:hover .arrow{
+    opacity: 1;
+    pointer-events: auto;
+    top: 10px;
+    right: 10px;
+}
+
+.company .brand-card img {
+    width: 70%;
+    object-fit: contain;
+}
+
+.products{
+    background-color:  #F8F8F8;
+    padding-top: 5vw;
+}
+
+@media (max-width: 768px) {
+    .company .brand-card{
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+}

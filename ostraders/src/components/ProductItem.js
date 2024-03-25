@@ -7,13 +7,14 @@ const ProductItem = () => {
         <>
 
             <div className={styles.item}>
-                <Link><img src="./images/car1.jpg" className='img-fluid' alt="" /></Link>
+                <img src="./images/asset 10.webp" className='img-fluid' alt="" />
+                <div className={styles.tag}>2023</div>
                 <div className={styles.item_content}>
-                    <div className="d-flex justify-content-between align-items-center mt-2 mb-1">
-                        <Link><h4>Car Name</h4></Link>
+                    <span>Sedan</span>
+                    <div className="d-flex justify-content-between align-items-start flex-column">
+                        <Link><h4>Mercedes-Benz C-Class</h4></Link>
                         <span className={styles.price}>$20,000</span>
                     </div>
-                    <p>Build Year: 2000</p>
                     <div className={styles.details}>
                         <div className="d-flex align-items-center">
                             <i class="fa-solid fa-engine ms-0"></i> 5600 CC
@@ -24,6 +25,10 @@ const ProductItem = () => {
                         <div className="d-flex align-items-center">
                             <i class="fa-solid fa-engine ms-0"></i> 5600 CC
                         </div>
+                    </div>
+                    <div className={styles.action}>
+                        <Link href="" className=''>View Details <i class="fa-solid fa-arrow-right"></i></Link>
+                        <button className={styles.btn}><i class="fa-regular fa-heart"></i></button>
                     </div>
                 </div>
             </div>

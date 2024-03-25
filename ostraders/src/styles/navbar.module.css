@@ -32,7 +32,6 @@ ul {
     background: var(--text-color);
     color: var(--bg-color);
     position: relative;
-    overflow-x: clip;
     z-index: 100;
 }
 
@@ -71,8 +70,9 @@ ul {
 
 .nav_main_menu li a{
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1.1rem !important;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1rem !important;
     color: var(--bg-color);
 }
 
@@ -229,7 +229,7 @@ main p {
 @media only screen and (max-width: 999px) {
 
     .nav.absolute .btn{
-        color: var(--text-color) !important;
+        color: var(--bg-color) !important;
     }
 
 
@@ -264,17 +264,21 @@ main p {
         overflow-y: auto;
         padding: 50px;
         padding-right: 0px;
-        transition: all 1s ease;
+        transition: all .4s;
     }
 
     .nav_main_menu.active {
-        right: 0;
+        right: -30px;
     }
 
     .nav_main_menu li {
         width: 100%;
         border-top: 1px solid #eee;
         font-size: 1.1rem !important;
+    }
+
+    .nav_main_menu li a{
+        color: var(--text-color);
     }
 
     .dropdown .nav_link {
@@ -298,6 +302,6 @@ main p {
 
     .menu_toggle {
         display: block;
-        color: var(--text-color) !important;
+        color: var(--bg-color) !important;
     }
 }
