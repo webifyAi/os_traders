@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Collection from './pages/Collection'
+import Footer from "./components/Footer";
 // import NoPage from "./pages/NoPage";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="about" element={<About />} />
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

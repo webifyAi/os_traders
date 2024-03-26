@@ -7,8 +7,7 @@ const ProductItem = () => {
         <>
 
             <div className={styles.item}>
-                <img src="./images/asset 10.webp" className='img-fluid' alt="" />
-                <div className={styles.tag}>2023</div>
+                <Link><img src="./images/car1.jpg" className='img-fluid' alt="" /></Link>
                 <div className={styles.item_content}>
                     <span>Sedan</span>
                     <div className="d-flex justify-content-between align-items-start flex-column">
