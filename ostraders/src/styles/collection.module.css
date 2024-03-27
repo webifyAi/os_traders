@@ -4,6 +4,11 @@
     font-size: .9rem;
 }
 
+::selection{
+    background-color: yellow;
+    color:black;
+}
+
 .collection select:focus-visible {
     outline: none;
 }
@@ -11,4 +16,83 @@
 .collection option{
     padding: 5px 15px;
     height: 100%;
+}
+.collection{
+    /* border: 2px solid black; */
+    height: 100%;
+    padding: 10px;
+    
+}
+.filter{
+    width: 100%;
+    border: 1px solid #e0dfdf;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.titleFilter{
+    padding: 10px;
+    
+}
+.titleFilter h2{
+    text-align: left;
+    padding-left: 10px;
+    border-left: 2px solid red;
+    font-size: 1.5rem;
+
+
+}
+.lines{
+    border: .9px solid #e0dfdf;
+    border-radius: 10px;
+    height: 4.5%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.lines h3{
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 300;
+
+
+}
+.lines i{
+    margin-right:10px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.range{
+    /* border: 1px solid #e0dfdf; */
+    border-radius: 10px;
+    height: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+.Price h4{
+    font-size:18px;
+    padding: 10px;
+}
+.FromAmount{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 1px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.FromAmount h4{
+    font-size: 15px;
 }
