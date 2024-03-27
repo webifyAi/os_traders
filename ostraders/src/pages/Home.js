@@ -3,6 +3,10 @@ import ProductItem from '../components/ProductItem'
 import styles from '../styles/product.module.css'
 import { Link } from 'react-router-dom';
 import data from "../assets/logos.json"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Home = () => {
 
@@ -19,6 +23,15 @@ const Home = () => {
       {/*herosection startsss heererere */}
 
       <div className="container-fluid herosection">
+        <div className="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <p>Follow us</p>
+        </div>
+      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+      <SwiperSlide>
         <div className="container">
           <div className="row">
             <div className="col-xl-7 hero-content">
@@ -41,6 +54,56 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-7 hero-content">
+              <span>Export Auto Service _____</span>
+              <h2>Mercediz Benz - 2.0</h2>
+              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+              <ul>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+              </ul>
+              <div className="mt-2">
+                <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+            <div className="col-xl-5">
+              <div className="hero-img">
+                <img src="./images/hero-car-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-7 hero-content">
+              <span>Export Auto Service _____</span>
+              <h2>Mercediz Benz - 2.0</h2>
+              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+              <ul>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+              </ul>
+              <div className="mt-2">
+                <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+            <div className="col-xl-5">
+              <div className="hero-img">
+                <img src="./images/hero-car-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        </SwiperSlide>
+        </Swiper>
       </div>
 
 

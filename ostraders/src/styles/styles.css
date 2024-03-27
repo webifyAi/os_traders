@@ -115,6 +115,20 @@ ul {
     }
 }
 }
+
+
+.social {
+    width: 40px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
 .social p{
     rotate: -90deg;
     width: 100px;
