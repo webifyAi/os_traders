@@ -16,12 +16,6 @@ h4{
     margin-left: 2vw;
     margin-top: 2vh;
 }
-p{
-    margin-top: 5vh;
-    margin-left: 2vw;
-    font-size: 1vw;
-
-}
 h3{
     margin-top: 5vh;
     margin-left: 2vw;
@@ -29,9 +23,6 @@ h3{
         
 }
 
- li{
-    line-height: 250%;
-}
  h1{
     font-size: 2vw;
 }
@@ -43,9 +34,6 @@ h3{
     margin-top: 2vh;
 }
 
- li{
-    line-height: 250%;
-}
  h1{
     font-size: 2vw;
 }
