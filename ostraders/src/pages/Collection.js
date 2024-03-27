@@ -8,7 +8,7 @@ const Collection = () => {
       <div className={`container-fluid padd-x marg-y ${styles.collection}`}>
         <div className="row">
           <div className="col-lg-3 col-12">
-
+            
           </div>
           <div className="col-lg-9 col-12">
             <div className="mb-2 d-flex justify-content-end align-items-center">

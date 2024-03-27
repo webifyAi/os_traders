@@ -1,135 +1,178 @@
-.footer{
+.footer {
     width: 100%;
     background-color: rgb(24, 24, 24);
-    height: 70vh;
-    margin-top: 50px;
+    height: 100%;
     color: white;
-    position: relative;
-    display: flex;
     list-style: none;
-    padding-top: 80px;
-    overflow: hidden;    
-}
-
-h4{
-    font-size: 1vw;
-    margin-left: 2vw;
-    margin-top: 2vh;
-}
-p{
-    margin-top: 5vh;
-    margin-left: 2vw;
-    font-size: 1vw;
+    overflow: hidden;
+    margin-top: 10%;
+    flex-direction: column;
 
 }
-h3{
-    margin-top: 5vh;
-    margin-left: 2vw;
-    font-size: 1vw;
-        
+
+.footer .footer1 {
+    padding: 50px 20px;
+
 }
 
- li{
-    line-height: 250%;
-}
- h1{
-    font-size: 2vw;
-}
- h2{
-    font-size: 1vw;
-    margin-top: 2vh;
-}
- h2{
-    margin-top: 2vh;
+.footer img {
+    width: 40%;
 }
 
- li{
-    line-height: 250%;
-}
- h1{
-    font-size: 2vw;
-}
- h2{
-    font-size: 1vw;
-    margin-top: 2vh;
-}
- h2{
-    margin-top: 2vh;
+.footer .first {
+    padding-right: 50px;
+    padding-left: 20px;
 }
 
+.first h2 {
 
- .me{
-    width: 80%;
-    height: 10%;
-    background: none;
-    background-color: transparent;
-    border-top: none;
-    border-radius: 35px;
-    text-align: center;
-    margin-top: 8vh;
+    font-size: 22px;
 }
 
- input{
-    width: 5%;
-    height: 5%;
-    margin-top: 8vh;
-    color: white;
+.first h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+    text-align: left;
 }
-.re{
+
+.footer h2 {
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.footer h3 {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 300;
+}
+
+.footer h3 li{
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+
+}
+.footer li{
     display: flex;
-    margin-top: 8vh;
-    gap: 1vw;
+    align-items: center;
+    gap: 10px;
 }
-.circle{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 2px solid wheat;
+.footer li i{
+    display: none;
+    color: red;
+    rotate: -45deg;
+}
+.footer li:hover{
+    color: red;
+}
+.footer li:hover i{
+    display: block;
+   
+}
+.first a {
+    color: white;
+    transition: all 0.5s ease-in-out;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: 300;
+
 }
 
-.bottom{
-    position: absolute;
-    bottom: 0;
+.first a:hover {
+    color: red;
+}
+
+.first i {
+    font-size: .9rem;
+}
+
+.footer .letter {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(168, 168, 168);
+}
+
+.footer input {
+    width: 250px;
+    height: 30px;
+    padding: 10px -5px;
+    border-top: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.bottom {
     height: 20%;
     width: 100%;
-    /* background-color: yellowgreen; */
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 2rem;
 }
-.copyright{
- width: 30%;
- height: 100%; 
- display: flex;
- align-items: center;  
 
- /* background-color: yellow; */
-}
-.copyright h2{
-    font-size: 1.2vw;
-}
-.icons{
-    width: 25%;
+.copyright {
     height: 100%;
-    /* background-color: #fff; */
+    display: flex;
+    align-items: center;
+}
+
+.copyright span {
+    color: red;
+}
+
+.copyright h2 {
+    font-size: 16px;
+}
+
+.icons {
+    height: 100%;
     color: rgb(255, 255, 255);
     font-size: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3vw;
+    font-size: 1.3rem;
 }
 
-
-.warning{
-    width: 30%;
+.warning {
     height: 100%;
-    /* background-color: aqua; */
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
 }
-.warning h4{
-    font-size: 1.3vw;
+
+.warning h4 {
+    font-size: 16px;
 }
 
+@media (max-width:999px) {
+    .bottom {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .copyright {
+        margin-top: 10px;
+    }
+
+    .icons {
+        margin-top: 10px;
+
+    }
+
+    .warning {
+        margin-top: 10px;
+    }
+}
