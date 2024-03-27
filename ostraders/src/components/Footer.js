@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-4 col-sm-6">
                         <div>
 
-                            <img src='./images/'></img>
+                            <img src='http://localhost:3000/images/OS%20TRADERS.png' ></img>
                             <h4>Dealership Has Multiple Locations throughout the city selling new and used cars.</h4>
                             <p>Ahmedabad james 007 mono Complex</p>
                             <h3>needhelp@gmail.com</h3>
