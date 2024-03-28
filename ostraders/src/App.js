@@ -33,21 +33,12 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="collection" element={<Collection /> } />
+            <Route path="collection" element={<Collection />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
           </Route>
         </Routes>
-      <Footer />
-          <Navbar />
-          <Routes>
-            <Route path="/">
-              <Route index element={<Home />} />
-              <Route path="collection" element={<Collection />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="about" element={<About />} />
-            </Route>
-          </Routes>
+        <Footer />
       </BrowserRouter>
 
     </>

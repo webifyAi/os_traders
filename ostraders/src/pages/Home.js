@@ -39,7 +39,7 @@ const Home = () => {
     }, '-=1')
 
   });
-  
+
 
   return (
     <>
@@ -48,85 +48,85 @@ const Home = () => {
 
       <div className="container-fluid herosection">
         <div className="social">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <p>Follow us</p>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <p>Follow us</p>
         </div>
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-      <SwiperSlide>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7 hero-content">
-              <span>Export Auto Service _____</span>
-              <h2>Mercediz Benz - 2.0</h2>
-              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-              <ul>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-              </ul>
-              <div className="mt-2">
-                <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <SwiperSlide>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 hero-content">
+                  <span>Export Auto Service _____</span>
+                  <h2>Mercediz Benz - 2.0</h2>
+                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+                  <ul>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                  </ul>
+                  <div className="mt-2">
+                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </div>
+                <div className="col-xl-5">
+                  <div className="hero-img">
+                    <img src="./images/hero-car-1.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-xl-5">
-              <div className="hero-img">
-                <img src="./images/hero-car-1.png" alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 hero-content">
+                  <span>Export Auto Service _____</span>
+                  <h2>Mercediz Benz - 2.0</h2>
+                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+                  <ul>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                  </ul>
+                  <div className="mt-2">
+                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </div>
+                <div className="col-xl-5">
+                  <div className="hero-img">
+                    <img src="./images/hero-car-1.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7 hero-content">
-              <span>Export Auto Service _____</span>
-              <h2>Mercediz Benz - 2.0</h2>
-              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-              <ul>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-              </ul>
-              <div className="mt-2">
-                <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-7 hero-content">
+                  <span>Export Auto Service _____</span>
+                  <h2>Mercediz Benz - 2.0</h2>
+                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
+                  <ul>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
+                  </ul>
+                  <div className="mt-2">
+                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
+                  </div>
+                </div>
+                <div className="col-xl-5">
+                  <div className="hero-img">
+                    <img src="./images/hero-car-1.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-xl-5">
-              <div className="hero-img">
-                <img src="./images/hero-car-1.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7 hero-content">
-              <span>Export Auto Service _____</span>
-              <h2>Mercediz Benz - 2.0</h2>
-              <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-              <ul>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-              </ul>
-              <div className="mt-2">
-                <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
-              </div>
-            </div>
-            <div className="col-xl-5">
-              <div className="hero-img">
-                <img src="./images/hero-car-1.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        </SwiperSlide>
+          </SwiperSlide>
         </Swiper>
       </div>
 
@@ -150,7 +150,7 @@ const Home = () => {
           </div>
         </div>
 
-      
+
         <div className="container my-5">
           <div className="heading text-center">
             <h2>Our car collection</h2>
@@ -179,18 +179,62 @@ const Home = () => {
           </div>
         </div>
 
-      </div>
-
-
-      <div className="container">
+        <div className="container customer marg-y">
+          <div className="row">
             <div className="col-lg-4 col-md-6 col-12">
-              div.
+              <div className="customerItem">
+                <div className='text-end me-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+                <i class="fa-duotone fa-credit-card-front"></i>
+              </div>
+              <div className="customerItem">
+                <div className='text-end me-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+                <i class="fa-duotone fa-credit-card-front"></i>
+              </div>
+              <div className="customerItem">
+                <div className='text-end me-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+                <i class="fa-duotone fa-credit-card-front"></i>
+              </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-12">
+            <div className="col-lg-4 col-md-6 col-12 d-lg-block d-none">
               <img src="./images/car-1.png" className='img-fluid' alt="" />
             </div>
-            <div className="col-lg-4 col-md-6 col-12"></div>
+            <div className="col-lg-4 col-md-6 col-12">
+              <div className="customerItem">
+                <i class="fa-duotone fa-credit-card-front"></i>
+                <div className='text-left ms-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+              </div>
+              <div className="customerItem">
+                <i class="fa-duotone fa-credit-card-front"></i>
+                <div className='text-left ms-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+              </div>
+              <div className="customerItem">
+                <i class="fa-duotone fa-credit-card-front"></i>
+                <div className='text-left ms-3'>
+                  <h4>Most Flexible Payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
 
 
 
