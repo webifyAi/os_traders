@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ProductItem from '../components/ProductItem'
 import styles from '../styles/product.module.css'
 import { Link } from 'react-router-dom';
@@ -7,6 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 const Home = () => {
 
@@ -16,6 +19,27 @@ const Home = () => {
     setSelectedItem(itemName);
   };
 
+
+  useGSAP(() => {
+
+    const tl = gsap.timeline({})
+
+    tl.from(".herosection img", {
+      x: '50%',
+      duration: 1,
+      opacity: 0,
+      ease: "power4.out",
+    })
+    tl.from(".herosection span, .herosection h2, .herosection p, .herosection ul li, .herosection a", {
+      y: 30,
+      duration: 1,
+      opacity: 0,
+      ease: "power4.inOut",
+      stagger: .15
+    }, '-=1')
+
+  });
+  
 
   return (
     <>
@@ -158,7 +182,15 @@ const Home = () => {
       </div>
 
 
-
+      <div className="container">
+            <div className="col-lg-4 col-md-6 col-12">
+              div.
+            </div>
+            <div className="col-lg-4 col-md-6 col-12">
+              <img src="./images/car-1.png" className='img-fluid' alt="" />
+            </div>
+            <div className="col-lg-4 col-md-6 col-12"></div>
+      </div>
 
 
 
