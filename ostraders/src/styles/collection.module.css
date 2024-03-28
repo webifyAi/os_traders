@@ -20,8 +20,12 @@
 .collection{
     /* border: 2px solid black; */
     height: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     
+}
+
+.titleC{
+    font-size: .9rem;
 }
 .filter{
     width: 100%;
@@ -33,6 +37,8 @@
     flex-direction: column;
     gap: 15px;
     position: relative;
+
+
 }
 
 .titleFilter{
@@ -44,8 +50,6 @@
     padding-left: 10px;
     border-left: 2px solid red;
     font-size: 1.5rem;
-
-
 }
 .lines{
     border: .9px solid #e0dfdf;
@@ -56,13 +60,50 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    cursor: pointer;
+}
+.drop::-webkit-scrollbar{
+    display: none;
+}
+.drop{
+    position: absolute;
+    width: 90%;
+    top: -55%;
+    left: 50%;
+    transform: translate(-50%,35.4%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: .8px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+.drop li{
+    padding: 8px 20px;
+    transition: .3s ;
+}
+.drop li:hover{
+    color:white;
+    background-color: red;
+}
+.lines .drop.active{
+    opacity: 1;
+    height: 200px;
+    width: 100%;
+    z-index: 999;
 }
 .lines h3{
     margin-left: 10px;
     font-size: 1rem;
     margin-top: 10px;
     font-weight: 300;
-
+    display: flex;
+    align-items: center;
 
 }
 .lines i{
@@ -95,4 +136,23 @@
 }
 .FromAmount h4{
     font-size: 15px;
+}
+.check{
+    height: 200px;
+    overflow: hidden scroll;
+}
+.lines input{
+    height: 20px;
+    width: 20px;
+
+}
+
+.lines.check{
+    border: none;
+    flex-direction: column;
+    align-items: start;
+    padding-bottom: 5px;
+}
+.check::-webkit-scrollbar{
+    display: none;
 }
