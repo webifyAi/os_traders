@@ -8,6 +8,47 @@ ul {
     margin-bottom: 0 !important;
 }
 
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.loading::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--text-color);
+    /* backdrop-filter: blur(5px); */
+}
+
+.loading [role=button]{
+    transition: all 1.2s ease;
+}
+
+.loading .hide [role=button]{
+    transform: translateX(-100%);
+    transition: all 1.2s ease;
+}
+
+.loading.stop{
+    display: none;
+}
+
+
+
 .padd-x {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -196,6 +237,7 @@ ul {
 .herosection .hero-content ul li {
     color: var(--text2-color);
     font-size: 1.15rem;
+    margin: 5px 0;
 }
 
 .herosection .hero-content ul li i {

@@ -5,8 +5,8 @@
 }
 
 ::selection{
-    background-color: yellow;
-    color:black;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
 .collection select:focus-visible {
