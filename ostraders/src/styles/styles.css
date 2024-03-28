@@ -60,7 +60,7 @@ ul {
 }
 
 .herosection .btn{
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .btn{
@@ -198,14 +198,14 @@ ul {
     padding-top: 100px;
     /* paddin/g-bottom: 200px; */
     overflow: hidden;
-    background-image: url("../../public/images/texture-bg-1.png");
+    background-image: url("../../public/images/BG\ 03.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     position: relative;
 }
 
-.herosection::before {
+/* .herosection::before {
     content: "";
     position: absolute;
     left: 0;
@@ -215,11 +215,11 @@ ul {
     background: -webkit-gradient(linear, left top, left bottom, from(#111010), to(rgba(17, 16, 16, 0.81)));
     background: linear-gradient(180deg, #111010 0%, rgba(17, 16, 16, 0.81) 100%);
     z-index: -1;
-}
+} */
 
 .herosection .hero-content h2 {
     font-size: 4.5rem;
-    color: var(--bg-color);
+    color: var(--text-color);
     margin: 20px 0;
 }
 
@@ -230,12 +230,12 @@ ul {
 }
 
 .herosection .hero-content p {
-    color: var(--text2-color);
+    color: var(--text-color);
     font-size: 1.25rem;
 }
 
 .herosection .hero-content ul li {
-    color: var(--text2-color);
+    color: var(--text-color);
     font-size: 1.15rem;
     margin: 5px 0;
 }
@@ -282,7 +282,10 @@ ul {
     .herosection {
         height: 100% !important;
         padding-top: 80px;
-        padding-bottom: 80px;
+    }
+
+    .swiper-slide{
+        padding-bottom: 50px;
     }
 
     .herosection .hero-img {
@@ -335,7 +338,7 @@ ul {
 
 .heading h2 {
     text-transform: capitalize;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -450,4 +453,23 @@ ul {
     background-color: var(--bg-color);
     color: var(--accent-color);
     padding: 15px;
+}
+
+@media (max-width: 999px) {
+    .customerItem{
+        flex-direction: column !important;
+        align-items: start;
+    }
+    .customerItem i{
+        margin-bottom: 10px;
+    }
+    .customerItem p{
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .customerItem{
+        margin: 30px 0;
+    }
 }

@@ -180,29 +180,39 @@ const Home = () => {
         </div>
 
         <div className="container customer marg-y">
+            <div className="heading text-center mb-5">
+              <h2>We Are Ensuring the Best <br /> Customer Experience</h2>
+            </div>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-12">
+
               <div className="customerItem">
-                <div className='text-end me-3'>
+                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
+                <div className='text-start text-lg-end me-3'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
-                <i class="fa-duotone fa-credit-card-front"></i>
+                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
               </div>
+
               <div className="customerItem">
-                <div className='text-end me-3'>
+                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
+                <div className='text-start text-lg-end me-3'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
-                <i class="fa-duotone fa-credit-card-front"></i>
+                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
               </div>
+
               <div className="customerItem">
-                <div className='text-end me-3'>
+                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
+                <div className='text-start text-lg-end me-3'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
-                <i class="fa-duotone fa-credit-card-front"></i>
+                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
               </div>
+
             </div>
             <div className="col-lg-4 col-md-6 col-12 d-lg-block d-none">
               <img src="./images/car-1.png" className='img-fluid' alt="" />
@@ -210,25 +220,28 @@ const Home = () => {
             <div className="col-lg-4 col-md-6 col-12">
               <div className="customerItem">
                 <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-3'>
+                <div className='text-left ms-lg-3 ms-0'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
               </div>
+
               <div className="customerItem">
                 <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-3'>
+                <div className='text-left ms-lg-3 ms-0'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
               </div>
+
               <div className="customerItem">
                 <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-3'>
+                <div className='text-left ms-lg-3 ms-0'>
                   <h4>Most Flexible Payment</h4>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
