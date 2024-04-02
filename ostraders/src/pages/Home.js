@@ -1,14 +1,8 @@
-import React, { useRef, useState } from 'react'
-import ProductItem from '../components/ProductItem'
-import styles from '../styles/product.module.css'
-import { Link } from 'react-router-dom';
-import data from "../assets/logos.json"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import React, { useEffect, useRef, useState } from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Herosection from '../components/Herosection';
 
 
 const Home = () => {
@@ -20,236 +14,20 @@ const Home = () => {
   };
 
 
+
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger)
 
-    const tl = gsap.timeline({})
 
-    tl.from(".herosection img", {
-      x: '50%',
-      duration: 1,
-      opacity: 0,
-      ease: "power4.out",
-    })
-    tl.from(".herosection span, .herosection h2, .herosection p, .herosection ul li, .herosection a", {
-      y: 30,
-      duration: 1,
-      opacity: 0,
-      ease: "power4.inOut",
-      stagger: .15
-    }, '-=1')
+
 
   });
 
 
+
   return (
     <>
-
-      {/*herosection startsss heererere */}
-
-      <div className="container-fluid herosection">
-        <div className="social">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <p>Follow us</p>
-        </div>
-        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-          <SwiperSlide>
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-7 hero-content">
-                  <span>Export Auto Service _____</span>
-                  <h2>Mercediz Benz - 2.0</h2>
-                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-                  <ul>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                  </ul>
-                  <div className="mt-2">
-                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
-                  </div>
-                </div>
-                <div className="col-xl-5">
-                  <div className="hero-img">
-                    <img src="./images/hero-car-1.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-7 hero-content">
-                  <span>Export Auto Service _____</span>
-                  <h2>Mercediz Benz - 2.0</h2>
-                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-                  <ul>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                  </ul>
-                  <div className="mt-2">
-                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
-                  </div>
-                </div>
-                <div className="col-xl-5">
-                  <div className="hero-img">
-                    <img src="./images/hero-car-1.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-7 hero-content">
-                  <span>Export Auto Service _____</span>
-                  <h2>Mercediz Benz - 2.0</h2>
-                  <p>Distinctively optimize web-enabled materials with functional markets. intellectual capital with applications. </p>
-                  <ul>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                    <li><i className='fa-regular fa-circle-check'></i>Leather Seats</li>
-                  </ul>
-                  <div className="mt-2">
-                    <a href="" className='btn'>Explore Now <i class="fa-regular fa-arrow-right-long"></i></a>
-                  </div>
-                </div>
-                <div className="col-xl-5">
-                  <div className="hero-img">
-                    <img src="./images/hero-car-1.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
-
-
-
-      {/*herosection ends heererere */}
-      <div className="container-fluid  products">
-
-        <div className="container padd-x">
-          <div className="heading text-center my-5">
-            <h3 className=''>Brands we have</h3>
-            <h2>Browse By makes</h2>
-          </div>
-          <div className="company">
-            {data.slice(0, 10).map((item, index) => {
-              return <div className='brand-card'>
-                <img src={item.image.source} alt="" />
-                <i class="fa-light fa-arrow-up-right arrow"></i>
-              </div>
-            })}
-          </div>
-        </div>
-
-
-        <div className="container my-5">
-          <div className="heading text-center">
-            <h2>Our car collection</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quibusdam placeat excepturi omnis similique perferendis</p>
-          </div>
-
-          <div className={styles.product_nav}>
-            <ul>
-              <li className={selectedItem === 'Luxury' ? styles.current : ''} onClick={() => handleClick('Luxury')}>Luxury</li>
-              <li className={selectedItem === 'Premium' ? styles.current : ''} onClick={() => handleClick('Premium')}>Premium</li>
-              <li className={selectedItem === 'Electric' ? styles.current : ''} onClick={() => handleClick('Electric')}>Electric</li>
-              <li className={selectedItem === 'Sports' ? styles.current : ''} onClick={() => handleClick('Sports')}>Sports</li>
-            </ul>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <ProductItem />
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6">
-              <ProductItem />
-            </div>
-          </div>
-          <div className="text-center my-5">
-            <Link class="btn-12"><span>View More</span></Link>
-          </div>
-        </div>
-
-        <div className="container customer marg-y">
-            <div className="heading text-center mb-5">
-              <h2>We Are Ensuring the Best <br /> Customer Experience</h2>
-            </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-12">
-
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
-                <div className='text-start text-lg-end me-3'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
-              </div>
-
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
-                <div className='text-start text-lg-end me-3'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
-              </div>
-
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front d-lg-none d-block"></i>
-                <div className='text-start text-lg-end me-3'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-                <i class="fa-duotone fa-credit-card-front d-lg-block d-none"></i>
-              </div>
-
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 d-lg-block d-none">
-              <img src="./images/car-1.png" className='img-fluid' alt="" />
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-lg-3 ms-0'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-              </div>
-
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-lg-3 ms-0'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-              </div>
-
-              <div className="customerItem">
-                <i class="fa-duotone fa-credit-card-front"></i>
-                <div className='text-left ms-lg-3 ms-0'>
-                  <h4>Most Flexible Payment</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit obcaecati illo numquam</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
+      <Herosection />
 
     </>
   )

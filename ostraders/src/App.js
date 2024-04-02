@@ -8,6 +8,8 @@ import Collection from './pages/Collection'
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
+import SmoothScroll from "./components/SmoothScroll";
+import Scroll from "./components/SmoothScroll";
 // import NoPage from "./pages/NoPage";
 
 
@@ -29,16 +31,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Scroll />
         <Navbar />
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="collection" element={<Collection />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="about" element={<About />} />
-          </Route>
-        </Routes>
-        <Footer />
+        <div className="smoothContainer">
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path="collection" element={<Collection />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="about" element={<About />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
 
     </>

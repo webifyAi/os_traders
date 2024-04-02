@@ -29,10 +29,14 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    background: var(--text-color);
-    color: var(--bg-color);
-    position: relative;
+    color: var(--text-color);
+    overflow-x: clip;
     z-index: 100;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
 }
 
 .nav.absolute {
@@ -69,11 +73,11 @@ ul {
 }
 
 .nav_main_menu li a{
-    text-transform: uppercase;
-    font-weight: 300;
+    text-transform: capitalize;
+    font-weight: 500;
     letter-spacing: 1px;
     font-size: 1rem !important;
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 
@@ -83,6 +87,7 @@ ul {
 
 .nav_main_menu li:hover a {
     color: var(--accent-color);
+    font-weight: 500;
 }
 
 .nav span {
@@ -105,7 +110,7 @@ ul {
 }
 
 .dropdown ul li:hover a {
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 /* ===== Dropdown ===== */
@@ -118,7 +123,7 @@ ul {
     position: absolute;
     top: 44px;
     left: 0;
-    background: var(--bg-color);
+    background: var(--bg-color) !important;
     min-width: 240px;
     border-left: 3px solid #ccc;
     border-radius: 0 0 7px 7px;
@@ -139,7 +144,7 @@ ul {
 }
 
 .dropdown_content li:hover a {
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 
@@ -167,7 +172,7 @@ ul {
 }
 
 .sub_dropdown_content li:hover a {
-    color: var(--bg-color) !important;
+    color: var(--text-color) !important;
 }
 
 @keyframes slideUp {
@@ -197,7 +202,7 @@ ul {
     padding: 0 25px;
     cursor: pointer;
     transition: .3s;
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .btn:hover {
@@ -210,7 +215,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 80vh;
-    color: var(--bg-color);
+    color: var(--text-color);
     padding: 20px;
 }
 
@@ -229,7 +234,7 @@ main p {
 @media only screen and (max-width: 999px) {
 
     .nav.absolute .btn{
-        color: var(--bg-color) !important;
+        color: var(--text-color) !important;
     }
 
 
@@ -257,7 +262,7 @@ main p {
         bottom: 0;
         top: 0;
         width: 300px;
-        background-color: var(--bg-color);
+        background-color: var(--text-color);
         box-shadow: -5px -5px 30px rgba(0, 0, 0, 0.1);
         height: 100vh;
         overflow-x: hidden;
@@ -294,7 +299,7 @@ main p {
 
     /* .nav_main_menu li:hover{
         background-color: var(--accent-color);
-        color: var(--bg-color);
+        color: var(--text-color);
     } */
 
 
@@ -302,6 +307,6 @@ main p {
 
     .menu_toggle {
         display: block;
-        color: var(--bg-color) !important;
+        color: var(--text-color) !important;
     }
 }
