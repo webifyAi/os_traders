@@ -13,8 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container-fluid" style={{background: "var(--text-color)", overflowX: 'clip'}}>
-                <nav className={`${styles.nav} container`}>
+                <nav className={`${styles.nav} `}>
                     <Link to="/" className={styles.logo}>
                         <img src="./images/OS TRADERS.png" alt="OS Traders" />
                     </Link>
@@ -45,7 +44,6 @@ const Navbar = () => {
                         <button className={styles.menu_toggle} onClick={menuOpen}><i className="fa-light fa-bars"></i></button>
                     </div>
                 </nav>
-            </div>
         </>
     )
 }

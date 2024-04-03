@@ -28,7 +28,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 8vw;
     color: var(--text-color);
     overflow-x: clip;
     z-index: 100;
@@ -37,6 +37,7 @@ ul {
     left: 0;
     right: 0;
     background: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .nav.absolute {
@@ -231,12 +232,15 @@ main p {
 
 
 /* ===== Responsive styles ===== */
-@media only screen and (max-width: 999px) {
+@media (max-width: 999px) {
 
     .nav.absolute .btn{
-        color: var(--text-color) !important;
+        color: var(--bg-color) !important;
     }
 
+    nav{
+        padding: 10px 20px !important;
+    }
 
     .logo img {
         width: 100px;
@@ -262,7 +266,7 @@ main p {
         bottom: 0;
         top: 0;
         width: 300px;
-        background-color: var(--text-color);
+        background-color: var(--bg-color);
         box-shadow: -5px -5px 30px rgba(0, 0, 0, 0.1);
         height: 100vh;
         overflow-x: hidden;
@@ -270,15 +274,16 @@ main p {
         padding: 50px;
         padding-right: 0px;
         transition: all .4s;
+        z-index: 9999;
     }
 
     .nav_main_menu.active {
-        right: -30px;
+        right: 0px;
     }
 
     .nav_main_menu li {
         width: 100%;
-        border-top: 1px solid #eee;
+        border-top: 1px solid #777;
         font-size: 1.1rem !important;
     }
 

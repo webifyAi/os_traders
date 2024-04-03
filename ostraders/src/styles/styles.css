@@ -15,7 +15,7 @@ ul {
     will-change: transform;
 }
 
-.herosection{
+.herosection {
     margin-top: 12vw;
     height: 100%;
     width: 100%;
@@ -25,35 +25,35 @@ ul {
     align-items: center;
 }
 
-.herosection h1{
+.herosection h1 {
     font-size: 4.5vw;
     font-weight: 600;
 }
 
-.herosection h1 div:nth-child(1){
+.herosection h1 div:nth-child(1) {
     font-size: 1em;
     font-weight: 600;
 }
 
-.herosection h1 div:nth-child(2){
+.herosection h1 div:nth-child(2) {
     font-size: .8em;
     font-weight: 400;
 }
 
-.scroll-content{
+.scroll-content {
     scrollbar-width: none !important;
 }
 
-.scrollAnime{
+.scrollAnime {
     height: 100vh;
     width: 100%;
 }
 
-.scrollAnime{
+.scrollAnime {
     position: relative;
 }
 
-.scrollAnime img{
+.scrollAnime img {
     position: absolute;
     top: 0;
     left: 0;
@@ -62,9 +62,10 @@ ul {
     z-index: -1;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-.scrollAnime canvas{
+.scrollAnime canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +73,85 @@ ul {
     bottom: 0;
 }
 
-.scrollAnime video{
+.scrollAnime video {
     width: 100%;
     height: 100%;
+}
+
+.scrollAnime h2 {
+    font-size: 4.5vw;
+    position: absolute;
+    top: -25%;
+    right: 25%;
+    bottom: 0;
+    margin: auto;
+    font-weight: normal;
+}
+
+.scrollAnime h2 span {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+@media (max-width: 999px) {
+    .herosection {
+        margin-top: 180px;
+    }
+
+    .herosection h1 {
+        font-size: 6vw;
+    }
+
+    .scrollAnime h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .herosection {
+        margin-top: 120px;
+    }
+
+    .herosection h1 {
+        font-size: 10vw;
+    }
+}
+
+.products {
+    height: 100vh;
+    width: 100%;
+}
+
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider-content video {
+    max-height: 380px;
+    width: 100%;
+    height: 100%;
+}
+
+.nextBtn{
+    position: absolute;
+    right: 10% !important;
+    top: 0;
+    bottom: 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 3vw !important;
+    font-weight: 200;
+}
+
+.prevBtn{
+    position: absolute;
+    left: 10% !important;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
 }

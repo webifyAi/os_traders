@@ -12,8 +12,25 @@ const Herosection = () => {
 
     useGSAP(() => {
 
-        
 
+        const tl = gsap.timeline({});
+
+        tl.from("nav", {
+            y: -100,
+            duration: .6,
+            opacity: 0,
+        })
+        tl.from(".herosection h1 div", {
+            y: 50,
+            duration: .8,
+            opacity: 0,
+            stagger: .3
+        })
+
+        tl.from(".scrollAnime img", {
+            opacity: 0,
+            duration: .5,
+        })
 
 
         gsap.registerPlugin(ScrollTrigger)
@@ -32,20 +49,6 @@ const Herosection = () => {
 
         function files(index) {
             var data = `
-    ./images/OSFrames/ezgif-frame-001.png
-    ./images/OSFrames/ezgif-frame-002.png
-    ./images/OSFrames/ezgif-frame-003.png
-    ./images/OSFrames/ezgif-frame-004.png
-    ./images/OSFrames/ezgif-frame-005.png
-    ./images/OSFrames/ezgif-frame-006.png
-    ./images/OSFrames/ezgif-frame-007.png
-    ./images/OSFrames/ezgif-frame-008.png
-    ./images/OSFrames/ezgif-frame-009.png
-    ./images/OSFrames/ezgif-frame-010.png
-    ./images/OSFrames/ezgif-frame-011.png
-    ./images/OSFrames/ezgif-frame-012.png
-    ./images/OSFrames/ezgif-frame-013.png
-    ./images/OSFrames/ezgif-frame-014.png
     ./images/OSFrames/ezgif-frame-015.png
     ./images/OSFrames/ezgif-frame-016.png
     ./images/OSFrames/ezgif-frame-017.png
@@ -144,7 +147,7 @@ const Herosection = () => {
             return data.split("\n")[index];
         }
 
-        const frameCount = 108;
+        const frameCount = 93;
 
         const images = [];
         const imageSeq = {
@@ -162,7 +165,7 @@ const Herosection = () => {
                 trigger: ".scrollAnime",
                 scroller: ".smoothContainer",
                 start: "top top",
-                end: `+=1000%`, // Adjust as needed
+                end: `+=200%`, // Adjust as needed
                 pin: true,
                 scrub: 1,
             },
@@ -173,7 +176,17 @@ const Herosection = () => {
                 ease: "none",
                 duration: 200,
                 onUpdate: render
-            });
+            })
+            .to(".scrollAnime img", {
+                display: "none",
+                duration: .2,
+            }, '-=1')
+            .from(".scrollAnime h2 div", {
+                y: 50,
+                duration: 50,
+                opacity: 0,
+                stagger: .3,
+            })
 
         images[0].onload = render;
 
@@ -207,8 +220,12 @@ const Herosection = () => {
                 </h1>
             </div>
             <div class="container-fluid scrollAnime p-0" id="Home">
-                <img src="./images/OSFrames/ezgif-frame-001.png" alt="" />
+                <img src="./images/OSFrames/ezgif-frame-015.png" alt="" />
                 <canvas ref={canvasRef}></canvas>
+                <h2 className='d-flex justify-content-center align-items-center flex-column'>
+                    <div><span>Buy</span> Your </div> 
+                    <div>Dream Car</div> 
+                </h2>
             </div>
         </>
     )
