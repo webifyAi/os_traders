@@ -32,7 +32,7 @@ ul {
     color: var(--text-color);
     overflow-x: clip;
     z-index: 100;
-    position: absolute !important;
+    position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
@@ -254,7 +254,8 @@ main p {
         border: none;
         outline: none;
         background-color: transparent;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: #fff;
     }
 
     .nav_main_menu {
@@ -265,7 +266,7 @@ main p {
         right: -100%;
         bottom: 0;
         top: 0;
-        width: 300px;
+        width: 100%;
         background-color: var(--bg-color);
         box-shadow: -5px -5px 30px rgba(0, 0, 0, 0.1);
         height: 100vh;
@@ -273,8 +274,9 @@ main p {
         overflow-y: auto;
         padding: 50px;
         padding-right: 0px;
+        padding-left: 0px !important;
         transition: all .4s;
-        z-index: 9999;
+        z-index: 99999;
     }
 
     .nav_main_menu.active {
@@ -283,12 +285,13 @@ main p {
 
     .nav_main_menu li {
         width: 100%;
-        border-top: 1px solid #777;
-        font-size: 1.1rem !important;
+        z-index: 99999;
     }
 
     .nav_main_menu li a{
         color: var(--text-color);
+        font-size: 2rem !important;
+        font-weight: 300;
     }
 
     .dropdown .nav_link {

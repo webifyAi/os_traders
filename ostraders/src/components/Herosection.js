@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,6 +12,7 @@ const Herosection = () => {
     const canvasRef = useRef(null);
 
     useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger)
 
 
         const tl = gsap.timeline({});
@@ -26,14 +28,16 @@ const Herosection = () => {
             opacity: 0,
             stagger: .3
         })
-
+        tl.from(".herosection .social", {
+            x: 50,
+            duration: .8,
+            opacity: 0,
+        })
         tl.from(".scrollAnime img", {
             opacity: 0,
             duration: .5,
         })
 
-
-        gsap.registerPlugin(ScrollTrigger)
 
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
@@ -214,17 +218,31 @@ const Herosection = () => {
     return (
         <>
             <div className="container-fluid p-0 herosection">
-                <h1 className='d-flex justify-content-center align-items-center flex-column'>
+                <h1 className='d-flex justify-content-end align-items-end flex-column'>
                     <div>Unleash Your Driving Passion</div>
-                    <div>Explore Our Latest Models Today</div>
+                    <div> Explore Our Latest</div>
+                    <div> Models Today</div>
                 </h1>
+                <div className="mt-4">
+                    <Link to="/" className='button'>Discover</Link>
+                </div>
+                <div className="indicator">
+                    <svg width="40" height="40" viewBox="0 0 50 130">
+                        <rect id="scroll" x="0" y="0" width="50" height="105" fill="#000" stroke="#871719" background="#000" strokeWidth="8" rx="25" ry="25"></rect>
+                        <circle id="circle-roll" cx="25" cy="32" r="8" fill="#871719"></circle>
+                    </svg>
+                    <div className='social'>
+                        <a href="" target='_blank'>ostraders@yahoo.com</a>
+                        <a href="" target='_blank'>(+91) 98989 89898</a>
+                    </div>
+                </div>
             </div>
             <div class="container-fluid scrollAnime p-0" id="Home">
                 <img src="./images/OSFrames/ezgif-frame-015.png" alt="" />
                 <canvas ref={canvasRef}></canvas>
                 <h2 className='d-flex justify-content-center align-items-center flex-column'>
-                    <div><span>Buy</span> Your </div> 
-                    <div>Dream Car</div> 
+                    <div><span>Buy</span> Your </div>
+                    <div>Dream Car</div>
                 </h2>
             </div>
         </>

@@ -4,6 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Herosection from '../components/Herosection';
 import ProductSlider from '../components/ProductSlider';
+import Category from '../components/Category';
 
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
   return (
     <>
       <Herosection />
+      <Category />
       <ProductSlider />
     </>
   )
