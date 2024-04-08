@@ -37,27 +37,45 @@ const Footer = () => {
         <>
             <footer className={styles.footer}>
                 <section className={styles.footer_container}>
-                    <div className="">
-                        <div className={styles.brands}>
-                            <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                            <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                        </div>
+                    <div className="container px-lg-0 px-5">
+                        <div className="row">
+                            <div className="col-lg-5 col-md-8 col-12">
+                                <h2>Ready To buy <br />Your New Car</h2>
+                                <div className="mt-3">
+                                    <Link className='button'>Buy Now</Link>
+                                </div>
+                            </div>
+                            <div className="col-lg-2 col-md-4 col-6 m-lg-0 my-5">
+                                <ul>
+                                    <li><Link>Home</Link></li>
+                                    <li><Link>Collections</Link></li>
+                                    <li><Link>About</Link></li>
+                                    <li><Link>Contact</Link></li>
+                                </ul>
+                            </div>
+                            <div className="col-lg-2 col-md-6 col-6 m-lg-0 my-5">
+                                <ul>
+                                    <li><Link>Home</Link></li>
+                                    <li><Link>Collections</Link></li>
+                                    <li><Link>About</Link></li>
+                                    <li><Link>Contact</Link></li>
+                                </ul>
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-12">
+                                <div className={styles.social}>
+                                    <h3>Get in touch</h3>
+                                    <Link>ostraders@yahoo.com</Link>
+                                    <Link>(+91) 98989 98989</Link>
 
-                        <div className="d-flex justify-content-center align-items-center my-3">
-                            <ul>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Career</a></li>
-                            </ul>
+                                    <div className={styles.brands}>
+                                        <Link><i className='fa-brands fa-instagram'></i> ostradersOffical</Link>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div className="d-flex justify-content-center align-items-center my-3">
-                            OSTRADERS Copyright © 2024 Webify.ai - All rights reserved
-                        </div>
+                    </div>
+                    <div className={styles.foot}>
+                        OSTRADERS Copyright © 2024 Webify.ai - All rights reserved
                     </div>
                 </section>
             </footer>

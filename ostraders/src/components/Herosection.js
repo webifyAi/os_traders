@@ -185,12 +185,12 @@ const Herosection = () => {
                 display: "none",
                 duration: .2,
             }, '-=1')
-            .from(".scrollAnime h2 div", {
-                y: 50,
-                duration: 50,
-                opacity: 0,
-                stagger: .3,
-            })
+            // .to(canvasRef.current, {
+            //     scale: 0.8,
+            //     duration: 50,
+            //     ease: 'power4.out'
+            // })
+          
 
         images[0].onload = render;
 
@@ -209,7 +209,21 @@ const Herosection = () => {
                 centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
         }
 
-
+        // gsap
+        //     scrollTrigger:{
+        //         scrub:.1,
+        //         trigger:"#home",
+        //         start:"bottom 100%",
+        //         scroller: ".smoothContainer",
+        //         markers: true,
+        //         // markers:true,
+        //     },
+        //   })
+        //   ScrollTrigger.create({
+        //     trigger:"#home",
+        //     pin:true,
+        //     start:"bottom 100%",
+        //   })
 
 
     });
@@ -237,13 +251,10 @@ const Herosection = () => {
                     </div>
                 </div>
             </div>
-            <div class="container-fluid scrollAnime p-0" id="Home">
+            <div className="container-fluid scrollAnime p-0" id="Home">
                 <img src="./images/OSFrames/ezgif-frame-015.png" alt="" />
                 <canvas ref={canvasRef}></canvas>
-                <h2 className='d-flex justify-content-center align-items-center flex-column'>
-                    <div><span>Buy</span> Your </div>
-                    <div>Dream Car</div>
-                </h2>
+                
             </div>
         </>
     )

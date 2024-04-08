@@ -1,7 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -26,8 +31,30 @@ const ProductSlider = () => {
     const mainSliderRef = useRef();
     const thumbnailSliderRef = useRef();
 
+
+    // useGSAP(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+
+
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".products",
+    //             start: "top 80%",
+    //             end: "top 20%",
+    //             scroller: ".smoothContainer",
+    //             markers: true,
+    //             scrub: true,
+    //             once: true, // Only play the animation once
+    //             onEnter: () => {
+    //                 mainSliderRef.current.slickGoTo(0)
+    //             }
+    //         }
+    //     });
+
+    // })
+
+
     const settingsMain = {
-        dots: true,
         lazyLoad: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -42,6 +69,12 @@ const ProductSlider = () => {
             thumbnailSliderRef.current.slickGoTo(nextSlide);
             // Play all videos
         },
+
+        afterChange: (currentSlide) => {
+            videoRefs.current.forEach((videoRef) => {
+                videoRef.play();
+            });
+        }
     };
 
     const settingsThumbnail = {
@@ -115,6 +148,9 @@ const ProductSlider = () => {
                         </video>
                     </div>
                 </Slider>
+            </div>
+            <div className="mt-2 text-center">
+                <Link className="button">Discover MC20</Link>
             </div>
         </div>
     );

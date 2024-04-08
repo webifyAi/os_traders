@@ -7,6 +7,7 @@ footer {
     height: 100%;
     width: 100vw;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 section.footer_container {
@@ -19,55 +20,93 @@ section.footer_container {
     justify-content: center;
 }
 
-.brands{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.footer h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: 1.5px;
 }
 
-.brands a i{
-    font-size: 1.5rem !important;
+.footer h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 60%;
+    width: 3px;
+    border-radius: 30px;
+    background-color: var(--accent-color);
+}
+
+.footer ul li {
+    padding: 5px 0;
+}
+
+.footer ul li a {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #999;
+}
+
+.footer h3 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
 .footer a {
     text-decoration: none;
-    color: gray;
-    transition: 0.5s;
 }
 
-.footer a:hover {
-    color: #fff;
+.footer .social {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
 }
 
-.footer ul {
-    width: 100%;
+.footer .social a {
+    font-weight: 600;
+    margin: 5px 0;
+    color: var(--accent-color);
 }
 
-.footer ul li {
-    display: inline-block;
-    margin: 0px 30px;
+.footer .social .brands {
+    margin-top: 8px;
 }
 
-.footer a i {
-    font-size: 2em;
-    margin: 0% 1%;
+.footer .social .brands a {
+    color: #999;
+    font-weight: normal;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+.footer .social .brands a i {
+    font-size: 1.5em;
+    color: var(--accent-color);
+}
 
-@media (max-width:720px) {
-    .footer {
-        text-align: left;
-        padding: 5%;
+.foot {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+
+    .footer h2::before {
+        left: -15px;
     }
+}
 
-    .footer ul li {
-        display: block;
-        margin: 10px 0px;
-        text-align: left;
-    }
-
-    .footer a i {
-        margin: 0% 3%;
+@media (max-width: 499px) {
+    .footer h2{
+        font-size: 2.5rem;
     }
 }

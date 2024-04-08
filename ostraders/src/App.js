@@ -8,10 +8,8 @@ import Collection from './pages/Collection'
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
-import SmoothScroll from "./components/SmoothScroll";
 import Scroll from "./components/SmoothScroll";
 // import NoPage from "./pages/NoPage";
-
 
 function App() {
 
