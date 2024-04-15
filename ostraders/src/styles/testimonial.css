@@ -98,7 +98,7 @@
     margin: 0;
     padding: 0;
     height: 400px;
-    width: 300px;
+    width: 400px;
     display: flex;
     overflow: hidden;
     box-shadow: 0px 0px 30px rgba(0, 0, 10, 0.12);
@@ -106,13 +106,13 @@
 
 .t-image ul li {
     height: 400px;
-    width: 300px;
+    width: 400px;
     list-style: none;
 }
 
 .t-image ul li img {
     height: 400px;
-    width: 300px;
+    width: 400px;
 }
 
 /* Testimonial Content */

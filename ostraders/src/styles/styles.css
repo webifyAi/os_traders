@@ -190,28 +190,25 @@ ul {
 .scrollAnime {
     height: 100vh;
     width: 100%;
-}
-
-.scrollAnime {
     position: relative;
     z-index: -1;
+    padding: 0 !important;
 }
+
 
 .scrollAnime img {
     position: absolute;
     left: 0;
-    right: 0;
     bottom: 0;
     z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 65%;
+    height: 80%;
+    object-fit: contain;
 }
 
 .scrollAnime canvas {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: -17%;
     bottom: 0;
 }
 
@@ -264,6 +261,9 @@ ul {
 
     .scrollAnime h2 {
         font-size: 3rem;
+    }
+    .scrollAnime canvas{
+        left: 0;
     }
 
     /* .herosection::before{

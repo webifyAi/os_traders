@@ -72,14 +72,14 @@ export const slideRight = (
     //  move from image 1 to 2
     if (state.fist === true) {
         setState({ fist: false, sec: true, third: false });
-        let x = pointer - 300;
+        let x = pointer - 400;
         setPointer(x);
         imageSlider(0, 1, 2, x, imageList);
         testimonialsFading(0, 1, 2, tesimonialsList);
     } // move from 2 to 3
     else if (state.sec === true) {
         setState({ fist: false, sec: false, third: true });
-        let x = pointer - 300;
+        let x = pointer - 400;
         setPointer(x);
         imageSlider(1, 2, 0, x, imageList);
         testimonialsFading(1, 2, 0, tesimonialsList);
@@ -106,21 +106,21 @@ export const slideLeft = (
     //  move from image 1 to 3
     if (state.fist === true) {
         setState({ fist: false, sec: false, third: true });
-        let x = -600;
+        let x = -800;
         setPointer(x);
         imageSlider(0, 2, 1, x, imageList);
         testimonialsFading(0, 2, 1, tesimonialsList);
     } // move from 2 to 1
     else if (state.sec === true) {
         setState({ fist: true, sec: false, third: false });
-        let x = pointer + 300;
+        let x = pointer + 400;
         setPointer(x);
         imageSlider(1, 0, 2, x, imageList);
         testimonialsFading(1, 0, 2, tesimonialsList);
     } // move from 3 to 2
     else {
         setState({ fist: false, sec: true, third: false });
-        let x = pointer + 300;
+        let x = pointer + 400;
         setPointer(x);
         imageSlider(2, 1, 0, x, imageList);
         testimonialsFading(2, 1, 0, tesimonialsList);

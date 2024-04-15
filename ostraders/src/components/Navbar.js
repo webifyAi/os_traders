@@ -71,6 +71,7 @@ const Navbar = () => {
                             <li><a href="/collection/trucks">Trucks</a></li>
                         </ul>
                     </li>
+                    <li ref={(ref) => menu.current.push(ref)}><a href="/MG" className={styles.nav_link}><img src="./images/MG.png" style={{width: "30px", height: "30px"}} alt="" /> Exclusive</a></li>
                     <li ref={(ref) => menu.current.push(ref)}><a href="/about" className={styles.nav_link}>About</a></li>
                     <li ref={(ref) => menu.current.push(ref)}><a href="/contact" className={styles.nav_link}>Contact</a></li>
                 </ul>
