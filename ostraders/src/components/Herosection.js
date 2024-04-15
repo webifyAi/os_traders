@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -10,6 +10,19 @@ const Herosection = () => {
 
 
     const canvasRef = useRef(null);
+    // const textRef = useRef(null);
+
+    // useEffect(() => {
+    //     const words = textRef.current.innerText.split(/\s+/);
+    //     textRef.current.innerHTML = "";
+
+    //     words.forEach(word => {
+    //         const wordElement = document.createElement("span");
+    //         wordElement.className = "word";
+    //         wordElement.innerHTML = word + " ";
+    //         textRef.current.appendChild(wordElement);
+    //     });
+    // }, []);
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger)
@@ -164,7 +177,8 @@ const Herosection = () => {
             images.push(img);
         }
 
-        gsap.timeline({
+
+        const t2 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".scrollAnime",
                 scroller: ".smoothContainer",
@@ -174,39 +188,113 @@ const Herosection = () => {
                 scrub: 1,
             },
         })
-            .to(imageSeq, {
-                frame: frameCount - 1,
-                snap: "frame",
-                ease: "none",
-                duration: 200,
-                onUpdate: render
-            })
-            .to(".scrollAnime img", {
-                display: "none",
-                duration: .2,
-            }, '-=1')
-            // .to(canvasRef.current, {
-            //     scale: 0.8,
-            //     duration: 50,
-            //     ease: 'power4.out'
-            // })
-          
+        t2.to(imageSeq, {
+            frame: frameCount - 1,
+            snap: "frame",
+            ease: "none",
+            duration: 200,
+            onUpdate: render
+        })
+        t2.to(".scrollAnime img", {
+            display: "none",
+            duration: .2,
+        }, '-=1')
+        t2.from(".word", {
+            opacity: 0,
+            y: 50,
+            stagger: 10,
+            delay: 10,
+            duration: 10,
+            scrollTrigger: {
+                trigger: ".scrollAnime",
+                start: "top top",
+                end: "+=200%",
+                scroller: ".smoothContainer",
+                scrub: true,
+            }
+        }, '-=5')
+
 
         images[0].onload = render;
 
         function render() {
             scaleImage(images[imageSeq.frame], context);
         }
-
         function scaleImage(img, ctx) {
-            var hRatio = canvas.width / img.width;
-            var vRatio = canvas.height / img.height;
-            var ratio = Math.max(hRatio, vRatio);
-            var centerShift_x = (canvas.width - img.width * ratio) / 2;
-            var centerShift_y = (canvas.height - img.height * ratio) / 2;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, img.width, img.height,
-                centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
+            if (window.innerWidth <= 768 && window.innerWidth >= 499) {
+                const canvas = document.querySelector("#Home>canvas");
+
+                var canvasWidth = canvas.width;
+                var canvasHeight = canvas.height / 1;
+
+                var scalingFactorX = canvasWidth / img.width;
+                var scalingFactorY = canvasHeight / img.height;
+
+                // Determine the aspect ratio of the image
+                var aspectRatio = img.width / img.height;
+
+                // Adjust the scaling factor to make the image slightly larger
+                var scalingFactor = Math.max(scalingFactorX, scalingFactorY);
+
+                // Calculate the scaled dimensions
+                var scaledWidth = img.width / scalingFactor;
+                var scaledHeight = img.height / scalingFactor;
+
+                // Adjust the dimensions if the scaled height exceeds the canvas height
+                if (scaledHeight > canvasHeight) {
+                    scaledHeight = canvasHeight * scalingFactor;
+                    scaledWidth = canvasHeight * aspectRatio * scalingFactor;
+                }
+
+                // Calculate the center shift
+                var centerShift_x = (canvasWidth - scaledWidth) / 2;
+                var centerShift_y = (canvasHeight - scaledHeight) / 2;
+
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                ctx.drawImage(img, centerShift_x, centerShift_y, scaledWidth, scaledHeight);
+            } else if(window.innerWidth <= 499){
+                const canvas = document.querySelector("#Home>canvas");
+
+                var canvasWidth = canvas.width;
+                var canvasHeight = canvas.height / 1.2;
+
+                var scalingFactorX = canvasWidth / img.width;
+                var scalingFactorY = canvasHeight / img.height;
+
+                // Determine the aspect ratio of the image
+                var aspectRatio = img.width / img.height;
+
+                // Adjust the scaling factor to make the image slightly larger
+                var scalingFactor = Math.max(scalingFactorX, scalingFactorY);
+
+                // Calculate the scaled dimensions
+                var scaledWidth = img.width / scalingFactor;
+                var scaledHeight = img.height / scalingFactor;
+
+                // Adjust the dimensions if the scaled height exceeds the canvas height
+                if (scaledHeight > canvasHeight) {
+                    scaledHeight = canvasHeight * scalingFactor;
+                    scaledWidth = canvasHeight * aspectRatio * scalingFactor;
+                }
+
+                // Calculate the center shift
+                var centerShift_x = (canvasWidth - scaledWidth) / 2;
+                var centerShift_y = (canvasHeight - scaledHeight) / 2;
+
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                ctx.drawImage(img, centerShift_x, centerShift_y, scaledWidth, scaledHeight);
+            }
+              else {
+                var hRatio = canvas.width / img.width;
+                var vRatio = canvas.height / img.height;
+                var ratio = Math.max(hRatio, vRatio);
+                var centerShift_x = (canvas.width - img.width * ratio) / 2;
+                var centerShift_y = (canvas.height - img.height * ratio) / 2;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, img.width, img.height,
+                    centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
+            }
+
         }
 
         // gsap
@@ -254,7 +342,10 @@ const Herosection = () => {
             <div className="container-fluid scrollAnime p-0" id="Home">
                 <img src="./images/OSFrames/ezgif-frame-015.png" alt="" />
                 <canvas ref={canvasRef}></canvas>
-                
+                <h2>
+                    <div className='animateTxt'><span className='word'>Rev</span> <span className='word'>up</span> <span className='word'> your</span> <span className='word'>automotive</span> </div>
+                    <div><span className='word'>adventure</span></div>
+                </h2>
             </div>
         </>
     )
