@@ -1,5 +1,5 @@
 .collection {
-    margin-top: 130px;
+    margin-top: 10px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -149,6 +149,7 @@
     padding: 10px 20px;
     border-radius: 28px;
     width: 150px;
+    cursor: pointer;
 }
 
 .filter label{

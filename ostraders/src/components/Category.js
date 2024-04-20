@@ -18,7 +18,7 @@ const Category = () => {
 
 
         // mm.add("(min-width:999px)", () => {
-           
+
         // })
 
 
@@ -87,63 +87,100 @@ const Category = () => {
     return (
         <>
             <div className="contianer-fluid categories padd-x my-5">
-                <div className="row">
-                    <div className="col-lg-5">
+                <div className="row justify-content-between">
+                    <div className="col-lg-6">
                         <div className="cat-head">
                             <h2>Our <br /> categories</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quod saepe modi aut maxime placeat voluptatibus eligendi sit exercitationem explicabo.</p>
                         </div>
                     </div>
-                    <div className="col-lg-7  pt-lg-0 pt-lg-3 pt-md-3">
+                    <div className="col-lg-5  pt-lg-0 pt-lg-3 pt-md-3">
                         <div className="cat-list">
                             <div className="cat-item cat-1">
                                 <div className="cat-image">
-                                    <img src="./images/cat-1.jpg" className='img-fluid' alt="" />
-                                </div>
-                                <div className="d-flex flex-column">
-                                    <h3>Cars</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illo! Nisi nesciunt vel laboriosam corrupti assumenda quas laudantium numquam magnam doloribus, eos pariatur quis</p>
-                                    <div className="mt-3">
-                                        <Link className="btn">View All</Link>
+                                    <img src="./images/cars.jpg" className='img-fluid' alt="" />
+                                    <div className="title">
+                                        <h4>Luxury Cars</h4>
+                                    </div>
+                                    <div className="curvbtn">
+                                        <Link><i className=' fa-regular fa-arrow-up-right'></i></Link>
+                                        <div class="br-left-top">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="br-right-bottom">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
                             <div className="cat-item cat-2">
                                 <div className="cat-image">
-                                    <img src="./images/cat-2.webp" className='' alt="" />
-                                </div>
-                                <div className="d-flex flex-column">
-                                    <h3>Trucks</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illo! Nisi nesciunt vel laboriosam corrupti assumenda quas laudantium numquam magnam doloribus, eos pariatur quis</p>
-                                    <div className="mt-3">
-                                        <Link className="btn">View All</Link>
+                                    <img src="./images/trucks.jpg" className='img-fluid' alt="" />
+                                    <div className="title">
+                                        <h4>Trucks</h4>
+                                    </div>
+                                    <div className="curvbtn">
+                                        <Link><i className=' fa-regular fa-arrow-up-right'></i></Link>
+                                        <div class="br-left-top">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="br-right-bottom">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="cat-item cat-3">
                                 <div className="cat-image">
-                                    <img src="./images/cat-3.jpg" className='img-fluid' alt="" />
-                                </div>
-                                <div className="d-flex flex-column">
-                                    <h3>Spare Parts</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illo! Nisi nesciunt vel laboriosam corrupti assumenda quas laudantium numquam magnam doloribus, eos pariatur quis</p>
-                                    <div className="mt-3">
-                                        <Link className="btn">View All</Link>
+                                    <img src="./images/spare parts.jpg" className='img-fluid' alt="" />
+                                    <div className="title">
+                                        <h4>Spare Parts</h4>
+                                    </div>
+                                    <div className="curvbtn">
+                                        <Link><i className=' fa-regular fa-arrow-up-right'></i></Link>
+                                        <div class="br-left-top">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="br-right-bottom">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="cat-item cat-4">
                                 <div className="cat-image">
-                                    <img src="./images/cat-4.jpg" className='' alt="" />
-                                </div>
-                                <div className="d-flex flex-column">
-                                    <h3>Oils</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illo! Nisi nesciunt vel laboriosam corrupti assumenda quas laudantium numquam magnam doloribus, eos pariatur quis</p>
-                                    <div className="mt-3">
-                                        <Link className="btn">View All</Link>
+                                    <img src="./images/car oils.jpg" className='img-fluid' alt="" />
+                                    <div className="title">
+                                        <h4>Car Oils</h4>
+                                    </div>
+                                    <div className="curvbtn">
+                                        <Link><i className=' fa-regular fa-arrow-up-right'></i></Link>
+                                        <div class="br-left-top">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="br-right-bottom">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+                                                <path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="#000"></path>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

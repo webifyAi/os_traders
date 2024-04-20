@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
 import Scroll from "./components/SmoothScroll";
+import Detail from "./pages/Detail";
+import ScrollToTop from "./components/ScrollToTop";
 // import NoPage from "./pages/NoPage";
 
 function App() {
@@ -26,11 +28,14 @@ function App() {
   // })
 
 
+
+
   return (
     <>
       <BrowserRouter>
-        <Scroll />
+        <Scroll/>
         <Navbar />
+        <ScrollToTop/>
         <div className="smoothContainer">
           <Routes>
             <Route path="/">
@@ -38,6 +43,7 @@ function App() {
               <Route path="collection" element={<Collection />} />
               <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
+              <Route path="detail" element={<Detail />} />
             </Route>
           </Routes>
           <Footer />

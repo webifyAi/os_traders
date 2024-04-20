@@ -8,76 +8,69 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 const Footer = () => {
 
 
-    useGSAP(() => {
-
-        // gsap.registerPlugin(ScrollTrigger)
-
-
-        // gsap.set('section.footer-container', { yPercent: -50 })
-
-        // const uncover = gsap.timeline({ paused: true })
-
-        // uncover
-        //     .to('section.footer-container', { yPercent: 0, ease: 'none' })
-        //     ;
-
-        // ScrollTrigger.create({
-        //     trigger: 'section.conclusion',
-        //     start: 'bottom bottom',
-        //     end: '+=75%',
-        //     animation: uncover,
-        //     scrub: true,
-        //     markers: true,
-        //     scroller: ".smoothContainer",
-        // })
-    })
-
-
     return (
         <>
             <footer className={styles.footer}>
-                <section className={styles.footer_container}>
-                    <div className="container px-lg-0 px-5">
-                        <div className="row">
-                            <div className="col-lg-5 col-md-8 col-12">
-                                <h2>Ready To buy <br />Your New Car</h2>
-                                <div className="mt-3">
-                                    <Link className='button'>Buy Now</Link>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-4 col-6 m-lg-0 my-5">
-                                <ul>
-                                    <li><Link>Home</Link></li>
-                                    <li><Link>Collections</Link></li>
-                                    <li><Link>About</Link></li>
-                                    <li><Link>Contact</Link></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-2 col-md-6 col-6 m-lg-0 my-5">
-                                <ul>
-                                    <li><Link>Home</Link></li>
-                                    <li><Link>Collections</Link></li>
-                                    <li><Link>About</Link></li>
-                                    <li><Link>Contact</Link></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-12">
-                                <div className={styles.social}>
-                                    <h3>Get in touch</h3>
-                                    <Link>ostraders@yahoo.com</Link>
-                                    <Link>(+91) 98989 98989</Link>
-
-                                    <div className={styles.brands}>
-                                        <Link><i className='fa-brands fa-instagram'></i> ostradersOffical</Link>
-                                    </div>
-                                </div>
-                            </div>
+                <div className={styles.contacts}>
+                    <div className={styles.contact_item}>
+                        <i class="fa-light fa-phone"></i>
+                        <div className="d-flex justify-content-start align-items-start flex-column">
+                            <span>Call us</span>
+                            <a className='m-0'>+91 98-333-4444</a>
                         </div>
                     </div>
-                    <div className={styles.foot}>
-                        OSTRADERS Copyright © 2024 Webify.ai - All rights reserved
+                    <div className={styles.border}></div>
+                    <div className={styles.contact_item}>
+                        <i class="fa-light fa-envelope"></i>
+                        <div className="d-flex justify-content-start align-items-start flex-column">
+                            <span>Call us</span>
+                            <a className='m-0'>+91 98-333-4444</a>
+                        </div>
                     </div>
-                </section>
+                    <div className={styles.border}></div>
+                    <div className={styles.contact_item}>
+                        <i class="fa-light fa-location-dot"></i>
+                        <div className="d-flex justify-content-start align-items-start flex-column">
+                            <span>Call us</span>
+                            <a className='m-0'>+91 98-333-4444</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={`row ${styles.footer_section}`}>
+                    <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <img src="./images/OS TRADERS.png" className='img-fluid' alt="" />
+                        <p>Purchasing a used car provides the opportunity to own a vehicle while avoiding the burden of wear and tear.</p>
+                        <div className="d-flex align-items-center justify-content-start">
+                            <i className={`fa-brands fa-whatsapp ${styles.icon}`}></i>
+                            <i className={`fa-brands fa-facebook-f ${styles.icon}`}></i>
+                            <i className={`fa-brands fa-instagram ${styles.icon}`}></i>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-md-center align-items-md-center flex-column">
+                        <div className=''>
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><Link to="">About</Link></li>
+                                <li><Link to="">Cars</Link></li>
+                                <li><Link to="">Car Types</Link></li>
+                                <li><Link to="">Team</Link></li>
+                                <li><Link to="">Contact</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-12 mb-4">
+                        <h4>Subscribe</h4>
+                        <p>Want to be notified about our services. Just sign up and we'll send you a notification by email.</p>
+                        <form action="" className={styles.newsLetter}>
+                            <input type="text" placeholder='Email Address'/>
+                            <button><i className={`fa-light fa-arrow-up-long ${styles.icon}`}></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div className={styles.foot}>
+                    <p>©2024 <a href="">webify.ai</a> All rights reserved.</p>
+                </div>
             </footer>
         </>
     )

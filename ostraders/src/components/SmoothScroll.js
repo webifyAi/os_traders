@@ -16,7 +16,7 @@ const options = {
     damping: 0.07,
 }
 
-const Scroll = () => {
+const Scroll = (props) => {
 
     useEffect(() => {
 
@@ -31,14 +31,16 @@ const Scroll = () => {
         });
         bodyScrollBar.addListener(ScrollTrigger.update);
 
-
+        
+    
         // This part is only necessary if you're using ScrollTrigger's markers:
         if (document.querySelector('.gsap-marker-scroller-start')) {
             const markers = gsap.utils.toArray('[class *= "gsap-marker"]');
             bodyScrollBar.addListener(({ offset }) => gsap.set(markers, { marginTop: -offset.y }));
         }
-        // End section necessary only if you're using ScrollTrigger's markers
-
+        // End section necessary only if you're using ScrollTrigger's marker
+  
+          
     }, [])
 
 

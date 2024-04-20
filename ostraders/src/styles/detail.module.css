@@ -1,0 +1,14 @@
+.page{
+    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
+    padding: 0 4vw;
+}
+
+.page h1{
+    font-size: 2.7vw;
+}
+
+.page .content{
+        
+}

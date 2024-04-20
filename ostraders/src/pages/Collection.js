@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import ProductItem from '../components/ProductItem';
+import PageHeader from '../components/PageHeader';
 
 const Collection = () => {
 
@@ -16,11 +17,8 @@ const Collection = () => {
 
   return (
     <>
+      <PageHeader subTitle="select your car" title="Our Luxury" spanTitle="Car Collection" bgImage="./images/headerBg.jpeg" />
       <div className={styles.collection}>
-        <div className="heading2">
-          <h1>The Collection</h1>
-        </div>
-
         <div className="mt-5 d-flex justify-content-between align-items-center w-100">
           <div className={styles.filter}>
             <div className="d-flex justify-content-between align-items-center">
@@ -28,6 +26,7 @@ const Collection = () => {
               <i className=' fa-regular fa-plus'></i>
             </div>
             <div className={styles.filter_dropdown}>
+
             </div>
           </div>
           <div className='d-flex justify-content-end align-items-center'>
@@ -46,15 +45,17 @@ const Collection = () => {
           </div>
         </div>
 
-        <div className="row my-5">
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-            <ProductItem />
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-            <ProductItem />
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-            <ProductItem />
+        <div className="container">
+          <div className="row my-5">
+            <div className="col-lg-6 col-md-12 col-12 mb-100">
+              <ProductItem />
+            </div>
+            <div className="col-lg-6 col-md-12 col-12 mb-100">
+              <ProductItem />
+            </div>
+            <div className="col-lg-6 col-md-12 col-12 mb-100">
+              <ProductItem />
+            </div>
           </div>
         </div>
       </div>

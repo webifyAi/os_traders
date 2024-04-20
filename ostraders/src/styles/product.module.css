@@ -53,173 +53,87 @@
     }
 }
 
+
 .item {
-    margin-bottom: 20px;
+    border-radius: 20px;
+    /* margin-bottom: 100px; */
+}
+
+.item .item_img {
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.item .item_img img {
+    transition: all .5s ease;
+}
+
+.item:hover .item_img img {
+    transform: scale(1.1);
+}
+
+.item .content {
     position: relative;
-    background-color: #111;
-}
-
-.item {
-    text-decoration: none;
-}
-
-.item a img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -45px;
+    z-index: 999;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
     height: fit-content;
-}
-
-.item .item_content {
-    padding: 20px;
-}
-
-.item span{
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-.item h4 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin: 5px 0;
-}
-
-.item .price {
-    color: var(--accent-color);
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-
-.item .tag{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: .9rem;
-    background-color: var(--accent-color);
-    border-radius: 5px;
-    z-index: 99;
-    color: var(--text-color);
-    padding: 5px 20px;
-    letter-spacing: 1px;
-    font-weight: normal;
-}
-
-.item p {
-    color: #aaa;
-    font-size: .9rem;
-    margin-bottom: 0;
+    background-color: var(--bg2-color);
+    padding: 25px;
+    border-radius: 20px;
+    color: #999;
 }
 
 .item .details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: .85rem;
-    color: var(--text-color);
-    padding: 10px 5px;
+    width: 100%;
 }
 
-.item .details img {
-    margin: 0 5px;
-    filter:invert(1);
+.item .details h4 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0;
 }
 
-.item .action{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-top: 1px solid #eee;
-    letter-spacing: .1px;
-}
-
-.item .action i{
-    color: var(--accent-color);
-    margin-left: 10px;
-}
-
-.item .action a i{
-    transition: all .5s ease;
-    padding: 10px;
+.item .details .icon {
+    width: 30px;
+    height: 30px !important;
+    background-color: var(--accent-color);
+    padding: 3px 9px;
     border-radius: 50%;
+    text-align: center;
 }
 
-.item:hover .action a i{
-    background-color: var(--accent-color);
+.item .details .icon img {
+    filter: invert(1);
+}
+
+.item .details span{
+    font-size: .8rem;
+    margin-right: 8px;
+}
+
+.item .price{
+    font-weight: bolder;
+    font-size: 1.35rem;
+    line-height: 100%;
+    letter-spacing: -.5px;
     color: var(--text-color);
+    margin-left: 5px;
 }
 
-.item .action a:hover{
-    color: var(--accent-color);
-    font-weight: 700;
-}
-
-.item .btn{
-    border: none;
-    outline: none;
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-}
-
-.item .btn i{
-    color: var(--text-color);
-}
-
-.item .btn i:hover {
-    color: var(--accent-color);
-}
-
-.item .item_img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.item .item_img img{
-    transition: all .5s ease;
-}
-
-.item .item_img .nav{
-    position: absolute;
-    bottom: 0;
-    /* background-color: var(--text-color); */
-    height: 100%;
-    width: 100%;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.item .item_img .nav div{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    /* width: 33.3%; */
-    height: 100%;
-}
-
-.item .item_img .nav div span{
-    height: 3px;
-    border-radius: 5px;
-    width: 100%;
-    background-color: #a1a1a1;
-    margin-top: auto;
-    margin-bottom: 2px;
-}
-
-
-.item .item_img .nav div:hover  span{
-    background-color: var(--accent-color);
+@media (max-width: 699px) {
+    .item .content{
+        width: 100%;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: start;
+        align-items: start;
+    }
 }
