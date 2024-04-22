@@ -67,7 +67,7 @@ const Search = () => {
 
     return (
         <>
-            <div className="search" >
+            <div className="parallax" style={{backgroundImage: "url('./images/background.jpeg')"}}>
                 <div className="container d-flex justify-content-center align-items-center flex-column" style={{ zIndex: "2", position: "relative" }}>
                     <span>Buy Now</span>
                     <h2>Search Your Dream Car</h2>
@@ -112,7 +112,7 @@ const Search = () => {
                         </div>
                         <div className={`dropdown ${dropDown ? 'active' : ''}`}>
                             <div className="row">
-                                <div className="col-md-2 col-12 pe-0" style={{ borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+                                <div className="col-lg-2  col-md-3 col-12 pe-lg-0 pe-md-0 left">
                                     <ul>
                                         <li className={filter === 'Brands' ? 'active' : ''} onClick={() => Filter("Brands")}>Brand</li>
                                         <li className={filter === 'Price Range' ? 'active' : ''} onClick={() => Filter("Price Range")}>Price Range</li>
@@ -121,7 +121,7 @@ const Search = () => {
                                         <li className={filter === 'Year' ? 'active' : ''} onClick={() => Filter("Year")}>Year</li>
                                     </ul>
                                 </div>
-                                <div className="col-md-10 col-12 px-5 py-3">
+                                <div className="col-lg-10 col-md-9 col-12 px-5 py-3">
                                     <div className="d-flex justify-content-between align-items-center mb-2">
                                         <h3>All Brands</h3>
                                         <h3 style={{ cursor: "pointer" }} onClick={() => ClearFilter()}>Clear All</h3>

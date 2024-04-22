@@ -13,20 +13,9 @@ import Search from '../components/Search';
 
 const Home = () => {
 
-  const [selectedItem, setSelectedItem] = useState('Luxury');
-
-  const handleClick = (itemName) => {
-    setSelectedItem(itemName);
-  };
-
-
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger)
-
-
-
-
   });
 
 
@@ -37,7 +26,17 @@ const Home = () => {
       <Category />
       <Search />
       <ProductSlider />
-      <Testimonial />
+      <div className="parallax" style={{ backgroundImage: "url('./images/asset 17.jpeg')", minHeight: "450px" }}>
+        <div className="container d-flex justify-content-center align-items-center flex-column" style={{ zIndex: "2", position: "relative" }}>
+          <span>Buy Now</span>
+          <h2>Interested in Buying?</h2>
+          <p className='mt-0'>Don't hesitate and send us a message.</p>
+          <div className="mt-3 d-flex justify-content-center align-items-center flex-wrap">
+            <a href="" className='button me-3 transform mb-2'><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp</a>
+            <a href="" className='button btn1 transform  mb-2'>Inquiry Now <i class="fa-light fa-arrow-up-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

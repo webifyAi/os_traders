@@ -22,8 +22,8 @@ const Herosection = () => {
                         <h1>Second Hand Car</h1>
                         <p>Bugatti Mistral W16 <span>$80,000</span>/-</p>
                         <div className="mt-3 d-flex justify-content-center align-items-center flex-wrap">
-                            <a href="" className='button me-3 transform mb-2'>View Details <i class="fa-light fa-arrow-up-right"></i></a>
-                            <a href="" className='button btn1 transform  mb-2'>Inquiry Now <i class="fa-light fa-arrow-up-right"></i></a>
+                            <a href="" className='button me-3 transform mb-2'>View Details <i class="fa-light fa-arrow-up-right ms-1"></i></a>
+                            <a href="" className='button btn1 transform  mb-2'>Inquiry Now <i class="fa-light fa-arrow-up-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>

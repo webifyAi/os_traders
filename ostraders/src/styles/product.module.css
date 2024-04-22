@@ -100,7 +100,7 @@
     margin: 0;
 }
 
-.item .details .icon {
+.icon {
     width: 30px;
     height: 30px !important;
     background-color: var(--accent-color);
@@ -109,7 +109,7 @@
     text-align: center;
 }
 
-.item .details .icon img {
+.icon img {
     filter: invert(1);
 }
 
