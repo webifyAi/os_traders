@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from '../styles/detail.module.css'
 import product from '../styles/product.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'photoswipe/dist/photoswipe.css'
@@ -15,9 +15,9 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 const Detail = () => {
 
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger)
-  });
+  // useGSAP(() => {
+  //   gsap.registerPlugin(ScrollTrigger)
+  // });
 
 
   const pagination = {
@@ -47,8 +47,12 @@ const Detail = () => {
           </div>
           <Swiper
             loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             pagination={pagination}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper">
             <SwiperSlide>
               <div className={styles.slider_item}>
@@ -104,7 +108,7 @@ const Detail = () => {
                     <Item
                       original="./images/asset 1.jpeg"
                       thumbnail="./images/asset 1.jpeg"
-                      width="768"
+                      width="699"
                       height="768"
                     >
                       {({ ref, open }) => (
@@ -114,7 +118,7 @@ const Detail = () => {
                     <Item
                       original="./images/asset 2.jpeg"
                       thumbnail="./images/asset 2.jpeg"
-                      width="768"
+                      width="699"
                       height="768"
                     >
                       {({ ref, open }) => (
@@ -124,7 +128,7 @@ const Detail = () => {
                     <Item
                       original="./images/asset 3.jpeg"
                       thumbnail="./images/asset 3.jpeg"
-                      width="768"
+                      width="699"
                       height="768"
                     >
                       {({ ref, open }) => (

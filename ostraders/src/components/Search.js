@@ -9,17 +9,8 @@ import logos from '../assets/logos.json'
 const Search = () => {
 
     useGSAP(() => {
-        // gsap.registerPlugin(ScrollTrigger)
-        // gsap.to(".search", {
-        //     backgroundPosition: `50% ${-window.innerHeight / 2}px`,
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: ".search", // Use the container as the trigger
-        //         start: "top center", // Start animation when the top of the container reaches the top of the viewport
-        //         end: "bottom bottom", // End animation when the bottom of the container reaches the bottom of the viewport
-        //         scrub: true, // Enable scrubbing for smoother animation
-        //     }
-        // });
+        gsap.registerPlugin(ScrollTrigger)
+       
     })
 
     const [dropDown, setDropDown] = useState(false);

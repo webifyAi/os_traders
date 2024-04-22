@@ -35,7 +35,7 @@ const ProductItem = () => {
                         </div>
                     </div>
                     <div className="d-flex align-items-center justify-content-center">
-                        <Link to="/detail" className='button' style={{ padding: "15px 20px", fontSize: ".8rem" }}>Details</Link>
+                        <a href="/detail" className='button' style={{ padding: "15px 20px", fontSize: ".8rem" }}>Details</a>
                         <p className={styles.price}>$10,000</p>
                     </div>
                 </div>

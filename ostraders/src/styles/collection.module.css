@@ -116,7 +116,7 @@
     padding: 10px 20px;
     border-radius: 8px;
     gap: 10px;
-    background-color: #555;
+    background-color: #222;
     cursor: pointer;
     transition: background .5s ease, color .5s ease, border .5s ease;
     margin: 0 5px;
@@ -124,7 +124,7 @@
 }
 
 .brand_card img{
-    filter: brightness(0);
+    filter: brightness(.8);
 }
 
 .brand_card h5{

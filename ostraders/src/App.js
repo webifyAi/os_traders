@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import Scroll from "./components/SmoothScroll";
 import Detail from "./pages/Detail";
 import ScrollToTop from "./components/ScrollToTop";
+import Inquiry from "./components/Inquiry";
+import MG from "./pages/MG";
 // import NoPage from "./pages/NoPage";
 
 function App() {
@@ -33,9 +35,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Scroll/>
-        <Navbar />
-        <ScrollToTop/>
+      <Navbar />
+        <Scroll />
+        <ScrollToTop />
         <div className="smoothContainer">
           <Routes>
             <Route path="/">
@@ -44,6 +46,7 @@ function App() {
               <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
               <Route path="detail" element={<Detail />} />
+              <Route path="MG" element={<MG />} />
             </Route>
           </Routes>
           <Footer />

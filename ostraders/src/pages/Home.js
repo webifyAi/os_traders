@@ -26,7 +26,7 @@ const Home = () => {
       <Category />
       <Search />
       <ProductSlider />
-      <div className="parallax" style={{ backgroundImage: "url('./images/asset 17.jpeg')", minHeight: "450px" }}>
+      <div className="parallax" style={{ backgroundImage: "url('./images/asset 17.jpeg')", minHeight: "450px", marginTop: "100px" }}>
         <div className="container d-flex justify-content-center align-items-center flex-column" style={{ zIndex: "2", position: "relative" }}>
           <span>Buy Now</span>
           <h2>Interested in Buying?</h2>

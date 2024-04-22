@@ -49,9 +49,9 @@ const Navbar = () => {
     return (
         <>
             <nav className={`${styles.nav} `}>
-                <Link to="/" className={styles.logo}>
+                <a href="/" className={styles.logo}>
                     <img src="./images/OS TRADERS.png" alt="OS Traders" />
-                </Link>
+                </a>
                 <div className='d-flex justify-content-center align-items-center'>
                     <ul className={`${styles.nav_main_menu} ${open ? styles.active : ""}`}>
                         <button className={styles.close_toggle} onClick={menuOpen}><i className="fa-light fa-xmark"></i></button>
